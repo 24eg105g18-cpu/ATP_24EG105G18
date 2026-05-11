@@ -1,0 +1,23 @@
+img{
+    width: 200px;
+   border-radius: 50%;
+    height: 200px;
+    
+    
+}
+
+.card{
+    box-shadow: 0px 0px 0px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+    height:1000px;
+    max-width: 100%;
+
+}
+
+.min-card {
+    text-align: center;
+    border: 2px solid red;
+}

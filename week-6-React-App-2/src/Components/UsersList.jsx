@@ -1,5 +1,5 @@
-import User from './User';
-function UserList(){
+import Users from "./user";
+function UsersList(){
     const users = [
   {
     name: "Aarav Sharma",
@@ -45,17 +45,20 @@ function UserList(){
     name: "Sneha Das",
     email: "sneha.das@example.com",
     image: "https://randomuser.me/api/portraits/women/14.jpg"
+  },
+  {
+    name: "Kavya Iyer",
+    email: "kavya.iyer@example.com",
+    image: "https://randomuser.me/api/portraits/women/15.jpg"
   }
 ];
-    return(
-        <div className="bg-gray-100 px-50">
-           <div  className="min-h-screen grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {
-                users.map((user)=>
-                (<User userObj={user} key={user.id} />))
-            }
-            </div> 
-        </div>
-    );
+return(
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-5">
+        {
+            users.map((userObj)=>
+                (<Users user={userObj} key={userObj.email}/>))
+        }
+    </div>
+);
 }
-export default UserList;
+export default UsersList;

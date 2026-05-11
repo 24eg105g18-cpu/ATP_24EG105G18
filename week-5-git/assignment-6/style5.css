@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+   margin: 100px 100px;
+    border: 2px solid black;
+}
+.top{
+    background-color:rgb(248, 244, 244);
+    color: rgb(231, 9, 9);
+    margin-top: 10px;
+}
+.middle{
+    background-color: rgb(249, 15, 15);
+    color: white;   
+    padding: 170px; 
+}
+.middle h2,p{
+        margin-bottom: 30px;
+}
+.bottom{
+background-color: rgb(249, 15, 15);
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 5px   ;
+padding-bottom: 300px;
+}
+cards{
+    background-color: rgb(81, 73, 73);
+    color: white;
+padding-bottom: 300px;
+}
+cards h3,p{
+    margin-bottom: 30px;
+}
