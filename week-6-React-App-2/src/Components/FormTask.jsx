@@ -41,8 +41,8 @@ function FormTask(){
                         required:"dob required",
                         minLength:5
                     })} className="border-2 w-full p-3"/>
-                    {errors.email?.type==="required" && <p className="text-red-500">{errors.email.message}</p>}
-                    {errors.email?.type==="minLength" && <p className="text-red-500">date of birth should have date,month,year</p>}
+                    {errors.dob?.type==="required" && <p className="text-red-500">{errors.dob.message}</p>}
+                    {errors.dob?.type==="minLength" && <p className="text-red-500">date of birth should have date,month,year</p>}
                     <button type="submit" className="p-2 bg-cyan-400 mt-2.5">Submit</button>
                     
                 </div>
