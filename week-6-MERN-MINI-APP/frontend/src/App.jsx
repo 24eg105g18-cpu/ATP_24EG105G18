@@ -7,16 +7,17 @@ import Employee from "./Components/Employee";
 import EditEmployee from "./Components/EditEmployee";
 
 function App() {
+  // Define application routes
   const routerObj = createBrowserRouter([
     {
       path: "/",
-      element: <RootLayout />,
+      element: <RootLayout />, // Main layout wrapper
       children: [
         { path: "", element: <Home /> },
-        { path: "create-emp", element: <CreateEmp /> },
-        { path: "list", element: <ListOfEmps /> },
-        { path:"employee",element:<Employee />},
-        { path:"edit-emp",element:<EditEmployee />}
+        { path: "create-emp", element: <CreateEmp /> }, // Page to add new employee
+        { path: "list", element: <ListOfEmps /> }, // Display all employees
+        { path: "employee", element: <Employee /> }, // View single employee details
+        { path: "edit-emp", element: <EditEmployee /> } // Edit employee details
       ],
     },
   ]);
