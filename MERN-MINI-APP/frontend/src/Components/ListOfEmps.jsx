@@ -9,27 +9,26 @@ function ListOfEmps() {
 
   const navigate = useNavigate();
 
-  // view employee
+  // Navigate to single employee view page
   const gotoEmployee = (empObj) => {
     navigate("/employee", { state: empObj });
   };
 
-  // edit employee
+  // Navigate to edit employee page
   const gotoEditEmployee = (empObj) => {
     navigate("/edit-emp", { state: empObj });
   };
 
-  // delete employee
+  // Delete employee record and refresh list
   const deleteEmployee = async (email) => {
     try {
       setLoading(true);
-
       let res = await axios.delete(
         `http://localhost:4000/emp-api/employees/${email}`
       );
 
       if (res.status === 200) {
-        getEmps(); // refresh list
+        getEmps(); // Fetch updated list
       }
     } catch (err) {
       console.log("Error:", err);
@@ -39,7 +38,7 @@ function ListOfEmps() {
     }
   };
 
-  // get all employees
+  // Fetch all employees from backend
   async function getEmps() {
     try {
       setLoading(true);
@@ -58,6 +57,7 @@ function ListOfEmps() {
     }
   }
 
+  // Fetch data on component mount
   useEffect(() => {
     getEmps();
   }, []);
@@ -66,10 +66,8 @@ function ListOfEmps() {
     <div>
       <h1 className="text-4xl text-center">List of Employees</h1>
 
-      {/* Loading */}
+      {/* Status Messages */}
       {loading && <p className="text-center text-blue-600">Loading...</p>}
-
-      {/* Error */}
       {error && <p className="text-center text-red-600">{error}</p>}
 
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-6">
@@ -110,4 +108,4 @@ function ListOfEmps() {
   );
 }
 
-export default ListOfEmps;
+export default ListOfEmps;

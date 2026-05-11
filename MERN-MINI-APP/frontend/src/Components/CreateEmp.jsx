@@ -7,17 +7,18 @@ function CreateEmp() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  // Initialize react-hook-form
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  //form submit
+  // Handle form submission and send data to backend
   const onFormSubmit = async (newEmpObj) => {
     try {
       setLoading(true);
-      //make HTTP POST req
+      // Make HTTP POST request to backend API
       let res = await fetch("http://localhost:4000/emp-api/employees", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -25,24 +26,22 @@ function CreateEmp() {
       });
 
       if (res.status === 201) {
-        //navigate to employees component programatically
+        // Redirect to employee list upon success
         navigate("/list");
       } else {
         let errorRes = await res.json();
-        console.log("error responce is ", errorRes);
+        console.log("error response is ", errorRes);
         throw new Error(errorRes.reason);
       }
     } catch (err) {
       console.log("err in catch", err);
-      //deal with err
       setError(err.message);
     } finally {
       setLoading(false);
     }
   };
 
-  console.log(error);
-
+  // UI rendering
   if (loading) {
     return <p className="text-center text-4xl">Loading....</p>;
   }
@@ -53,7 +52,7 @@ function CreateEmp() {
   return (
     <div>
       <h1 className="text-5xl text-center text-gray-600">Create New Employee</h1>
-      {/* form */}
+      {/* Registration Form */}
       <form className=" max-w-md mx-auto mt-10" onSubmit={handleSubmit(onFormSubmit)}>
         <input
           type="text"
@@ -95,4 +94,4 @@ function CreateEmp() {
   );
 }
 
-export default CreateEmp;
+export default CreateEmp;

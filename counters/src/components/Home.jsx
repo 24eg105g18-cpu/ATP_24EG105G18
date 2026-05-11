@@ -1,6 +1,7 @@
 import { useCounterStore } from "../stores/useCounterStore";
 
 function Home() {
+  // Extract state and actions from the Zustand store
   const counter = useCounterStore((state) => state.newCounter);
   const increment = useCounterStore((state) => state.incrementCounter);
   const decrement = useCounterStore((state) => state.decrementCounter);

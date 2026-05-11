@@ -14,10 +14,10 @@ function EditEmployee() {
 
   const navigate = useNavigate();
 
-  //get empObj from navigate hook
+  // Retrieve employee data passed via navigation state
   const { state } = useLocation();
-  // console.log(state);
 
+  // Populate form fields with existing employee data on load
   useEffect(() => {
     setValue("name", state.name);
     setValue("email", state.email);
@@ -26,12 +26,12 @@ function EditEmployee() {
     setValue("companyName", state.companyName);
   }, []);
 
+  // Handle saving the modified employee details
   const saveModifiedEmp = async (modifiedEmp) => {
-    // console.log(modifiedEmp);
-    //make HTTP PUT req
+    // Make HTTP PUT request to update the employee
     const res = await axios.put(`http://localhost:4000/emp-api/employees/${state._id}`, modifiedEmp);
     if (res.status === 200) {
-      //navigate to ListOfEMps
+      // Redirect back to the employee list
       navigate("/list");
     }
   };
@@ -39,7 +39,7 @@ function EditEmployee() {
   return (
     <div>
       <h1 className="text-5xl text-center text-yellow-600">Edit Employee</h1>
-      {/* form */}
+      {/* Edit Form */}
       <form className=" max-w-md mx-auto mt-10" onSubmit={handleSubmit(saveModifiedEmp)}>
         <input
           type="text"
@@ -81,4 +81,4 @@ function EditEmployee() {
   );
 }
 
-export default EditEmployee
+export default EditEmployee;
