@@ -1,16 +1,36 @@
-# React + Vite
+# Week 6 React App 2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This folder contains a React + Vite project focused on interactive UI and modern form handling. It demonstrates how to structure a React application with reusable components, Tailwind styling, and declarative form workflows.
 
-Currently, two official plugins are available:
+## Key Technologies
+- React for component-driven UI
+- Vite for fast development and builds
+- Tailwind CSS for styling and layout
+- React Hook Form for form state and validation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Core Features
+- responsive form-based interface
+- reusable component patterns
+- validation and submission handling
+- styled UI with Tailwind utilities
 
-## React Compiler
+## Folder Structure
+- `src/App.jsx` — main app structure and routing
+- `src/components/` — UI and form components
+- `src/main.jsx` — app entrypoint and render logic
+- `src/index.css` — global styles and Tailwind setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Setup and Run
+1. open the `week-6-React-App-2` folder
+2. install dependencies with `npm install`
+3. start the app with `npm run dev`
+4. open the local Vite URL shown in the terminal
 
-## Expanding the ESLint configuration
+## How to Explore
+- inspect `src/App.jsx` to understand component composition and page layout
+- review form components to see how validation is configured
+- customize styles and add new input fields or UI sections
+- experiment with Tailwind classes and component reuse
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Why It Matters
+This project teaches modern React app patterns and practical form handling. It is a good example of how to build a polished frontend with React, Vite, and Tailwind.

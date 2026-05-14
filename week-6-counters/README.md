@@ -1,16 +1,36 @@
-# React + Vite
+# Week 6 Counters
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This folder contains a React + Vite project that demonstrates state-driven UI and reusable component architecture. It is designed around a small counter app with global state, routing, and Tailwind styling.
 
-Currently, two official plugins are available:
+## Key Technologies
+- React for UI composition
+- Vite for fast local development and build
+- Zustand for lightweight global state management
+- Tailwind CSS for utility-first styling
+- React Router for page navigation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Core Features
+- multiple counter components with increment, decrement, and reset
+- global store usage via `zustand` for shared state
+- responsive layout and component-based styling
+- route-based navigation between pages
 
-## React Compiler
+## Folder Structure
+- `src/components/` — reusable UI components and page views
+- `src/stores/` — Zustand store definitions and state hooks
+- `src/App.jsx` — main app layout and router configuration
+- `src/main.jsx` — Vite app entrypoint
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Setup and Run
+1. open the `week-6-counters` folder
+2. install dependencies with `npm install`
+3. start the app with `npm run dev`
+4. open the local Vite URL shown in the terminal
 
-## Expanding the ESLint configuration
+## How to Explore
+- inspect `src/stores/useCounterStore.js` to understand the shared state model
+- open page components like `Home.jsx` and layout components like `RootLayout.jsx`
+- extend the app by adding new counters, derived totals, or UI sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Why It Matters
+This project teaches how to organize React state outside components, how to connect UI to a shared store, and how to build a small but scalable Vite application.

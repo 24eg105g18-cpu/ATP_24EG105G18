@@ -1,16 +1,46 @@
-# React + Vite
+﻿# Week 7 Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This folder contains the React frontend for the Week 7 blog application. The frontend is built with Vite, styled with Tailwind CSS, and integrates with the backend API for user authentication and blog content management.
 
-Currently, two official plugins are available:
+## Key Technologies
+- React for building reusable UI components
+- Vite for fast development and build performance
+- Tailwind CSS for utility-first styling
+- React Router for client-side navigation
+- Zustand for lightweight global state management
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Core Features
+- login and registration screens
+- authenticated dashboard and user flow
+- blog post listing, detail view, and creation forms
+- image preview and upload integration with backend
+- responsive UI for desktop and mobile layouts
 
-## React Compiler
+## Folder Structure
+- `src/App.jsx` — application shell and route definitions
+- `src/components/` — reusable UI components and page sections
+- `src/assets/` — static assets such as images and icons
+- `src/store/` — global state store and authentication state
+- `src/main.jsx` — app entrypoint and render logic
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Setup Instructions
+1. install dependencies with `npm install`
+2. start the frontend with `npm run dev`
+3. open the local Vite URL shown in the terminal
+4. configure the API base URL if needed, then connect to the backend
 
-## Expanding the ESLint configuration
+## Frontend Workflow
+- authenticate users using the backend JWT-based login
+- store authentication state in the Zustand store
+- fetch blog posts and user data from the backend API
+- send form data and file uploads to backend endpoints
+- manage navigation between home, post, and profile pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What to Explore
+- inspect `src/App.jsx` for routing and layout control
+- review components under `src/components/` to understand UI composition
+- examine how state and auth flows are handled in `src/store/`
+- experiment with styling and add new pages or components
+
+## Why It Matters
+This frontend ties the Week 7 project together by providing the user experience layer. It demonstrates how a modern React application communicates with a Node.js backend and delivers a complete full-stack blog application.

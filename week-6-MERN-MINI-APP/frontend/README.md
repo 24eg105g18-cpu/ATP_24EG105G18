@@ -1,16 +1,28 @@
-# React + Vite
+# MERN Mini App Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This frontend folder contains a React + Vite app that works with the backend API in the parent folder.
 
-Currently, two official plugins are available:
+What it uses:
+- React for the UI
+- Vite for fast local development
+- Tailwind CSS for styling
+- Axios for API calls
+- React Hook Form for managing forms
+- Zustand for lightweight global state
+- toast libraries for notifications
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+What to look at:
+- `src/App.jsx` for application structure
+- `src/store/` to see shared state patterns
+- `src/components/` for reusable UI pieces
 
-## React Compiler
+How to use it:
+1. install dependencies with `npm install`
+2. start the app with `npm run dev`
+3. make sure the backend is running on `http://localhost:4000`
+4. open the Vite URL in your browser
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+How to improve it:
+- add new API calls for create/update/delete operations
+- improve form validation and error messages
+- add a loading indicator for network requests
