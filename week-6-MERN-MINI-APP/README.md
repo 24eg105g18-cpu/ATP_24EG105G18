@@ -38,3 +38,4 @@ This week contains a compact full-stack project with a backend API and a React f
 
 ## Why It Matters
 This mini app shows how frontend and backend code can be developed together. It is a practical introduction to full-stack development, teaching API design, database models, HTTP communication, and UI integration.
+DeploymentLink: https://atp-24-eg-105-g18-djxv.vercel.app/
